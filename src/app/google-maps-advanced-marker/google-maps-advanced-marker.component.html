@@ -1,0 +1,12 @@
+<h3>Simple Marker</h3>
+<google-map
+  mapId="yourMapId"
+  height="400px"
+  width="750px"
+  [center]="center"
+  [zoom]="zoom"
+  (mapClick)="addAdvancedMarker($event)">
+    @for (position of advancedMarkerPositions; track position) {
+      <map-advanced-marker [position]="position" [options]="advancedMarkerOptions" />
+    }
+</google-map>
